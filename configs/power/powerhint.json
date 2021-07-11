@@ -53,8 +53,10 @@
       "Name": "GPUMinFreq",
       "Path": "/sys/class/kgsl/kgsl-3d0/devfreq/min_freq",
       "Values": [
-        "0",
-        "7"
+        "650000000",
+        "565000000",
+        "430000000",
+        "267000000"
       ],
       "ResetOnInit": true
     },
@@ -362,7 +364,7 @@
       "PowerHint": "EXPENSIVE_RENDERING",
       "Node": "GPUMaxFreq",
       "Duration": 0,
-      "Value": "0"
+      "Value": "800000000"
     },
     {
       "PowerHint": "DOUBLE_TAP_TO_WAKE",
