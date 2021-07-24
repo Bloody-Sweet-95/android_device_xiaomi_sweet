@@ -169,6 +169,15 @@
       "ResetOnInit": true
     },
     {
+      "Name": "EnergyAware",
+      "Path": "/proc/sys/kernel/sched_energy_aware",
+      "Values": [
+        "0",
+        "1"
+      ],
+      "ResetOnInit": true
+    },
+    {
       "Name": "DoubleTapToWakeEnable",
       "Path": "/sys/devices/virtual/touch/touch_dev/double_tap",
       "Values": [
@@ -291,12 +300,6 @@
       "Node": "CPULittleClusterMinFreq",
       "Duration": 5000,
       "Value": "9999999"
-    },
-    {
-      "PowerHint": "LAUNCH",
-      "Node": "PMQoSCpuDmaLatency",
-      "Duration": 5000,
-      "Value": "44"
     },
     {
       "PowerHint": "LAUNCH",
