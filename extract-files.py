@@ -72,8 +72,6 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('libaudioroute.so', 'libaudioroute-v34.so'),
     'vendor/lib64/camera/components/com.qti.node.watermark.so': blob_fixup()
         .add_needed('libpiex_shim.so'),
-    'vendor/lib64/camera/components/com.vidhance.node.eis.so': blob_fixup()
-        .call(blob_fixup_graphic_buffer_size),
     ('vendor/lib64/hw/camera.qcom.so', 'vendor/lib64/libFaceDetectpp-0.5.2.so', 'vendor/lib64/libfacedet.so'): blob_fixup()
         .binary_regex_replace(b'libmegface.so', b'libfacedet.so')
         .binary_regex_replace(b'libMegviiFacepp-0.5.2.so', b'libFaceDetectpp-0.5.2.so')
