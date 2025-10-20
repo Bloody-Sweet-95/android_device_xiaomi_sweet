@@ -16,6 +16,19 @@ $(call inherit-product, device/xiaomi/sweet/device.mk)
 $(call inherit-product, vendor/custom/config/common_full_phone.mk)
 TARGET_SCREEN_WIDTH := 1080
 
+# Lunaris flags
+TARGET_USES_CORE_GAPPS := true
+WITH_BCR := true
+BYPASS_CHARGE_SUPPORTED := true
+LUNARIS_BUILD_TYPE := OFFICIAL
+
+# Maintainer Data
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.paranoid.maintainer=RAYYAN
+
+# Signing
+PRODUCT_DEFAULT_DEV_CERTIFICATE := vendor/lunaris-priv/keys/releasekey
+
 PRODUCT_NAME := lineage_sweet
 PRODUCT_DEVICE := sweet
 PRODUCT_BRAND := Xiaomi
