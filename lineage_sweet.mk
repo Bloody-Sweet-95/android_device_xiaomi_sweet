@@ -15,6 +15,19 @@ $(call inherit-product, device/xiaomi/sweet/device.mk)
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+# Lunaris flags
+TARGET_USES_CORE_GAPPS := true
+WITH_BCR := true
+BYPASS_CHARGE_SUPPORTED := true
+LUNARIS_BUILD_TYPE := OFFICIAL
+
+# Maintainer Data
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.paranoid.maintainer=RAYYAN
+
+# Signing
+PRODUCT_DEFAULT_DEV_CERTIFICATE := vendor/lunaris-priv/keys/releasekey
+
 PRODUCT_NAME := lineage_sweet
 PRODUCT_DEVICE := sweet
 PRODUCT_BRAND := Xiaomi
