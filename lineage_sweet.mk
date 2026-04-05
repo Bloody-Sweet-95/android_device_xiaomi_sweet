@@ -17,7 +17,7 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 TARGET_SCREEN_WIDTH := 1080
 
 # Lunaris flags
-TARGET_USES_CORE_GAPPS := true
+WITH_GMS := true
 WITH_BCR := true
 BYPASS_CHARGE_SUPPORTED := true
 LUNARIS_BUILD_TYPE := OFFICIAL
